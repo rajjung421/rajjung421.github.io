@@ -54,6 +54,7 @@ h2{font:600 1.5rem/1.2 "Source Serif 4",Georgia,serif;margin:0 0 18px}
 .item .where{color:var(--ink2);font-style:italic;font-family:"Source Serif 4",Georgia,serif}
 .item ul{margin:8px 0 0;padding-left:18px;color:var(--ink2)}
 .item li{margin:3px 0}
+.sub{margin:-4px 0 16px;color:var(--ink2)}
 .card{background:var(--surface);border:1px solid var(--rule);border-radius:12px;padding:20px 22px}
 .card h3{margin:0 0 6px;font:600 1.15rem "Source Serif 4",Georgia,serif}
 .card p{margin:0 0 12px;color:var(--ink2)}
@@ -85,7 +86,7 @@ footer{border-top:1px solid var(--rule);padding:26px 0 50px;color:var(--muted);f
   <a class="l" href="#experience">Experience</a>
   <a class="l" href="#publications">Publications</a>
   <a class="l" href="#projects">Projects</a>
-  <a class="l" href="#notes">Notes</a>
+  <a class="l" href="#notes">Open notes</a>
   <a class="l" href="#poem">Poem</a>
   <button id="theme" aria-label="Toggle dark mode">◐</button>
 </div></nav>
@@ -191,23 +192,26 @@ footer{border-top:1px solid var(--rule);padding:26px 0 50px;color:var(--muted);f
 </section>
 
 <section id="notes">
-  <h2>Learning notes</h2>
+  <h2>Open notes on GitHub</h2>
+  <p class="sub">Self-contained write-ups I keep public: each has a readable web page and a GitHub repository with the LaTeX source and figures.</p>
   <div class="card">
     <h3>Differentiable plasticity FEM in JAX</h3>
     <p>A small, fully differentiable punch-test model with J<sub>2</sub> plasticity (Voce + Armstrong–Frederick hardening),
     with detailed flowcharts of how information about the hardening law travels to the measured load: return map,
     consistent tangent, contact, history, and exact sensitivities (forward mode, adjoint and a hand-written recursion).</p>
     <div class="links">
-      <a class="btn" href="https://rajjung421.github.io/differentiable-plasticity-jax/">Read the notes</a>    </div>
+      <a class="btn" href="https://rajjung421.github.io/differentiable-plasticity-jax/">Read the notes</a>
+      <a class="btn" href="https://github.com/rajjung421/differentiable-plasticity-jax"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.4-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.4 1.1 3 .9.1-.7.4-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.8 1a9.6 9.6 0 0 1 5 0c1.9-1.3 2.8-1 2.8-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/></svg>GitHub repo</a>
+    </div>
   </div>
   <div class="card" style="margin-top:14px">
     <h3>When is a Gaussian prior “the same kind of thing”?</h3>
-    <p>Computational notes on the Feldman–Hájek theorem, equivalent versus singular Gaussian measures, and what they mean
-    for building priors for groundwater heads: which features (wells, leakage, a conductivity lens) can be added as a
-    correction to a stationary SPDE prior, and which force the operator itself to change.</p>
+    <p>Computational notes on the Feldman–Hájek theorem: when two Gaussian measures are equivalent or mutually singular,
+    and what that means for SPDE priors, which changes (a mean shift, a finite-rank correction, a change of lower-order
+    coefficients) stay in the same class, and which force the operator itself to change.</p>
     <div class="links">
       <a class="btn" href="https://rajjung421.github.io/gaussian-measure-equivalence/">Read the notes</a>
-      <a class="btn" href="https://github.com/rajjung421/gaussian-measure-equivalence">Source</a>
+      <a class="btn" href="https://github.com/rajjung421/gaussian-measure-equivalence"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.4-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.4 1.1 3 .9.1-.7.4-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.8 1a9.6 9.6 0 0 1 5 0c1.9-1.3 2.8-1 2.8-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/></svg>GitHub repo</a>
     </div>
   </div>
 </section>
