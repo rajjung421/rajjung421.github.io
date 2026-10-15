@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Raj Jung Mahat</title>
+<meta name="description" content="Raj Jung Mahat — Ph.D. candidate in Mechanical Engineering at Georgia Tech working on Bayesian inference, Gaussian processes and uncertainty quantification.">
+<meta property="og:title" content="Raj Jung Mahat">
+<meta property="og:description" content="Bayesian inference, Gaussian processes and uncertainty quantification for physical models.">
+<meta property="og:image" content="https://rajjung421.github.io/assets/raj-avatar.jpg">
+<link rel="icon" href="assets/raj-avatar.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fbfaf7; --surface:#ffffff; --ink:#1b1a17; --ink2:#4f4d47; --muted:#8a877f;
+  --rule:#e6e3dc; --accent:#2a6fc2; --accent-soft:#e8f0fa; --warm:#b5652b;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#131311; --surface:#1b1b18; --ink:#ecebe6; --ink2:#bdbab2; --muted:#87847c;
+  --rule:#2d2c28; --accent:#79aef0; --accent-soft:#1b2a3d; --warm:#e09a63;}}
+:root[data-theme="dark"]{
+  --bg:#131311; --surface:#1b1b18; --ink:#ecebe6; --ink2:#bdbab2; --muted:#87847c;
+  --rule:#2d2c28; --accent:#79aef0; --accent-soft:#1b2a3d; --warm:#e09a63;}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16.5px/1.65 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:960px;margin:0 auto;padding:0 16px}
+nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
+nav .wrap{display:flex;align-items:center;gap:20px;height:54px;overflow-x:auto;white-space:nowrap}
+nav .brand{font-weight:600;color:var(--ink);margin-right:auto}
+nav a.l{color:var(--ink2);font-size:.92rem}
+#theme{border:1px solid var(--rule);background:var(--surface);color:var(--ink2);border-radius:6px;padding:3px 9px;cursor:pointer;font:inherit;font-size:.85rem}
+header.hero{display:grid;grid-template-columns:300px 1fr;gap:44px;align-items:center;padding:56px 0 40px}
+.hero img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,.12)}
+.hero h1{font:600 2.6rem/1.1 "Source Serif 4",Georgia,serif;margin:0 0 6px;letter-spacing:-.01em}
+.hero .role{color:var(--ink2);font-size:1.08rem;margin:0 0 18px}
+.hero p.bio{font:1.08rem/1.7 "Source Serif 4",Georgia,serif;color:var(--ink);margin:0 0 20px}
+.links{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:7px;padding:8px 14px;border:1px solid var(--rule);border-radius:8px;background:var(--surface);color:var(--ink);font-size:.9rem;font-weight:500}
+.btn:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.btn svg{width:16px;height:16px;fill:currentColor}
+section{padding:34px 0;border-top:1px solid var(--rule)}
+h2{font:600 1.5rem/1.2 "Source Serif 4",Georgia,serif;margin:0 0 18px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:var(--accent-soft);color:var(--ink);padding:5px 11px;border-radius:999px;font-size:.88rem}
+.item{display:grid;grid-template-columns:150px 1fr;gap:18px;padding:12px 0}
+.item + .item{border-top:1px dashed var(--rule)}
+.when{color:var(--muted);font-size:.9rem;padding-top:2px}
+.item h3{margin:0;font-size:1.02rem;font-weight:600}
+.item .where{color:var(--ink2);font-style:italic;font-family:"Source Serif 4",Georgia,serif}
+.item ul{margin:8px 0 0;padding-left:18px;color:var(--ink2)}
+.item li{margin:3px 0}
+.card{background:var(--surface);border:1px solid var(--rule);border-radius:12px;padding:20px 22px}
+.card h3{margin:0 0 6px;font:600 1.15rem "Source Serif 4",Georgia,serif}
+.card p{margin:0 0 12px;color:var(--ink2)}
+.pubs{list-style:none;padding:0;margin:0}
+.pubs li{padding:10px 0;border-top:1px dashed var(--rule);color:var(--ink2)}
+.pubs li:first-child{border-top:0}
+.pubs b{color:var(--ink)}
+.pubs .yr{display:inline-block;min-width:48px;color:var(--muted)}
+.poem{display:grid;grid-template-columns:1fr 1fr;gap:30px;background:var(--surface);border:1px solid var(--rule);border-radius:14px;padding:28px 30px;position:relative}
+.poem::before{content:"“";position:absolute;top:-14px;left:22px;font:600 4.5rem/1 "Source Serif 4",serif;color:var(--warm);opacity:.5}
+.poem .orig{font:italic 1.12rem/1.95 "Source Serif 4",Georgia,serif;color:var(--ink);margin:0;white-space:pre-line}
+.poem .tr{font:1rem/1.95 "Source Serif 4",Georgia,serif;color:var(--ink2);margin:0;white-space:pre-line}
+.poem .lab{font:600 .72rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.note{font-size:.84rem;color:var(--muted);margin-top:10px}
+footer{border-top:1px solid var(--rule);padding:26px 0 50px;color:var(--muted);font-size:.88rem}
+@media (max-width:760px){
+  header.hero{grid-template-columns:1fr;gap:24px;padding-top:28px}
+  .hero img{max-width:280px}
+  .hero h1{font-size:2.1rem}
+  .item{grid-template-columns:1fr;gap:2px}
+  .poem{grid-template-columns:1fr;padding:24px 20px}
+}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <span class="brand">Raj Jung Mahat</span>
+  <a class="l" href="#research">Research</a>
+  <a class="l" href="#experience">Experience</a>
+  <a class="l" href="#publications">Publications</a>
+  <a class="l" href="#notes">Notes</a>
+  <a class="l" href="#poem">Poem</a>
+  <button id="theme" aria-label="Toggle dark mode">◐</button>
+</div></nav>
+
+<main class="wrap">
+<header class="hero">
+  <img src="assets/raj.jpg" alt="Raj Jung Mahat at a canyon overlook">
+  <div>
+    <h1>Raj Jung Mahat</h1>
+    <p class="role">Ph.D. Candidate, Mechanical Engineering · Georgia Institute of Technology</p>
+    <p class="bio">I build validated predictive models from noisy measurement data, combining physics simulation,
+    Gaussian-process surrogates, dimensionality reduction and Bayesian inference. My dissertation, with
+    Prof. Surya Kalidindi, studies Bayesian constitutive calibration and identifiability under compressed mechanical
+    observation. I also have industry MLOps experience from Multiscale AI.</p>
+    <div class="links">
+      <a class="btn" href="mailto:rmahat3@gatech.edu"><svg viewBox="0 0 24 24"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7.2L20.2 7H3.8L12 12.2zM4 8.6V17h16V8.6l-8 5-8-5z"/></svg>Email</a>
+      <a class="btn" href="https://github.com/rajjung421"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.4-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.4 1.1 3 .9.1-.7.4-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.8 1a9.6 9.6 0 0 1 5 0c1.9-1.3 2.8-1 2.8-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/></svg>GitHub</a>
+      <a class="btn" href="https://www.linkedin.com/in/rajjung421"><svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.1c.5-1 1.8-2 3.7-2 4 0 4.7 2.6 4.7 6V21h-4v-5.6c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9V21H9z"/></svg>LinkedIn</a>
+    </div>
+  </div>
+</header>
+
+<section id="research">
+  <h2>Research interests</h2>
+  <div class="chips">
+    <span class="chip">Bayesian inverse problems</span><span class="chip">Gaussian processes &amp; surrogates</span>
+    <span class="chip">MCMC (TMCMC, HMC, Riemannian)</span><span class="chip">Model discrepancy</span>
+    <span class="chip">Identifiability &amp; sensitivity analysis</span><span class="chip">Uncertainty quantification</span>
+    <span class="chip">Latent-space modeling (PCA, diffusion maps)</span><span class="chip">Gaussian measures &amp; SPDE priors</span>
+    <span class="chip">Survival analysis</span><span class="chip">Finite-element modeling</span>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="item"><div class="when">2022 – present</div><div>
+    <h3>Graduate Research Assistant</h3><div class="where">Georgia Institute of Technology, Atlanta</div>
+    <ul>
+      <li>Bayesian inference of constitutive models from high-throughput small-punch and tensile tests, from finite-element simulation to posterior, applied to nine alloys.</li>
+      <li>Gaussian-process emulators on a PCA-compressed response space; transitional and Hamiltonian MCMC for multimodal posteriors.</li>
+      <li>A response-dependent discrepancy model in latent space that cut cross-test error from 28% to 13%.</li>
+      <li>Likelihood-informed-subspace identifiability analysis used to guide test design; built a DIC-instrumented small-punch rig.</li>
+    </ul></div></div>
+  <div class="item"><div class="when">2025 (4 mo.)</div><div>
+    <h3>Data Scientist Intern</h3><div class="where">Multiscale AI, Atlanta</div>
+    <ul>
+      <li>MLOps modules for the inference workflow, data workflow and feature-engineering pipeline, with a logging backend.</li>
+      <li>An inverse-inference toolkit (surrogates plus MCMC) packaged for reuse across client problems.</li>
+      <li>A Cox proportional-hazards model of adhesive-bond durability for a Novelis aluminum surface-treatment study.</li>
+    </ul></div></div>
+  <div class="item"><div class="when">2018 – 2021</div><div>
+    <h3>Graduate Research Student</h3><div class="where">Indian Institute of Science, Bangalore</div>
+    <ul><li>Neural-network inverse models to infer material properties from instrumented indentation.</li></ul></div></div>
+</section>
+
+<section id="education">
+  <h2>Education</h2>
+  <div class="item"><div class="when">2022 – 2027 (exp.)</div><div><h3>Ph.D., Mechanical Engineering</h3>
+    <div class="where">Georgia Institute of Technology · doctoral minor in Mathematics</div></div></div>
+  <div class="item"><div class="when">2018 – 2021</div><div><h3>M.S., Materials Engineering</h3>
+    <div class="where">Indian Institute of Science, Bangalore</div></div></div>
+  <div class="item"><div class="when">2013 – 2017</div><div><h3>B.S., Mechanical Engineering</h3>
+    <div class="where">M.S. Ramaiah Institute of Technology, Bangalore</div></div></div>
+</section>
+
+<section id="publications">
+  <h2>Publications and manuscripts</h2>
+  <ul class="pubs">
+    <li><span class="yr">2026</span><b>R. J. Mahat</b>, A. Venkatraman, S. R. Kalidindi. Bayesian calibration of Voce hardening parameters from the small punch test. <i>In preparation.</i></li>
+    <li><span class="yr">2026</span>S. Mahmoud, <b>R. J. Mahat</b>, et al., S. R. Kalidindi. Bayesian identification of elastic-plastic properties from high-throughput small punch tests and DIC measurements. <i>Under review.</i></li>
+    <li><span class="yr">2026</span>N. Flores, et al. (incl. <b>R. Mahat</b>, S. R. Kalidindi, R. Arróyave). Data-driven insights into composition–property relationships in FCC high entropy alloys. <i>Scripta Materialia</i> 274, 117136. <a href="https://doi.org/10.1016/j.scriptamat.2025.117136">doi</a></li>
+    <li><span class="yr">2024</span>M. Mulukutla, A. N. Person, S. Voigt, et al. Illustrating an effective workflow for accelerated materials discovery. <i>Integrating Materials and Manufacturing Innovation</i> 13, 453–473. <a href="https://doi.org/10.1007/s40192-024-00357-3">doi</a></li>
+  </ul>
+</section>
+
+<section id="notes">
+  <h2>Learning notes</h2>
+  <div class="card">
+    <h3>When is a Gaussian prior “the same kind of thing”?</h3>
+    <p>Computational notes on the Feldman–Hájek theorem, equivalent versus singular Gaussian measures, and what they mean
+    for building priors for groundwater heads: which features (wells, leakage, a conductivity lens) can be added as a
+    correction to a stationary SPDE prior, and which force the operator itself to change.</p>
+    <div class="links">
+      <a class="btn" href="https://rajjung421.github.io/gaussian-measure-equivalence/">Read the notes</a>
+      <a class="btn" href="https://github.com/rajjung421/gaussian-measure-equivalence">Source</a>
+    </div>
+  </div>
+</section>
+
+<section id="poem">
+  <h2>A poem</h2>
+  <div class="poem">
+    <div>
+      <div class="lab">Original</div>
+      <p class="orig">Ye deewana kaha kuch puch maat apne dil ka haal
+Tere dadili ki kisse tho rom rom jane naal
+Puche puch tu jaag pukare
+Na sake koi na koi tuje nihare
+Tu kar jo tu soche
+Jo soche kay tu howe
+Jane jan, kabi dekh le nazar uthake
+Pardangiya par par kar udhe hai subhe saam</p>
+    </div>
+    <div>
+      <div class="lab">In English (a free rendering)</div>
+      <p class="tr">This madman says: don't ask the state of your own heart;
+the tales of your great heart are known to every fibre of me.
+Asking and asking, you wake and call out —
+none can reach you, none can behold you.
+Do what you dream of;
+what you dream of, may you become.
+Beloved, once in a while, lift your gaze and look:
+wing upon wing, the birds take flight, morning and evening.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">© 2026 Raj Jung Mahat · Atlanta, GA · <a href="mailto:rmahat3@gatech.edu">rmahat3@gatech.edu</a></div></footer>
+
+<script>
+(function(){
+  const root=document.documentElement, b=document.getElementById('theme');
+  try{const t=localStorage.getItem('theme'); if(t) root.setAttribute('data-theme',t);}catch(e){}
+  b.addEventListener('click',()=>{
+    const dark = root.getAttribute('data-theme') ? root.getAttribute('data-theme')==='dark'
+               : matchMedia('(prefers-color-scheme: dark)').matches;
+    const t = dark ? 'light' : 'dark'; root.setAttribute('data-theme',t);
+    try{localStorage.setItem('theme',t);}catch(e){}
+  });
+})();
+</script>
+</body>
+</html>
