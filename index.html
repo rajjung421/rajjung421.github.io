@@ -61,7 +61,7 @@ h2{font:600 1.5rem/1.2 "Source Serif 4",Georgia,serif;margin:0 0 18px}
 .pubs li{padding:10px 0;border-top:1px dashed var(--rule);color:var(--ink2)}
 .pubs li:first-child{border-top:0}
 .pubs b{color:var(--ink)}
-.pubs .yr{display:inline-block;min-width:48px;color:var(--muted)}
+.pubs .yr{display:inline-block;min-width:64px;color:var(--muted)}
 .poem{display:grid;grid-template-columns:1fr 1fr;gap:30px;background:var(--surface);border:1px solid var(--rule);border-radius:14px;padding:28px 30px;position:relative}
 .poem::before{content:"“";position:absolute;top:-14px;left:22px;font:600 4.5rem/1 "Source Serif 4",serif;color:var(--warm);opacity:.5}
 .poem .orig{font:italic 1.12rem/1.95 "Source Serif 4",Georgia,serif;color:var(--ink);margin:0;white-space:pre-line}
@@ -84,6 +84,7 @@ footer{border-top:1px solid var(--rule);padding:26px 0 50px;color:var(--muted);f
   <a class="l" href="#research">Research</a>
   <a class="l" href="#experience">Experience</a>
   <a class="l" href="#publications">Publications</a>
+  <a class="l" href="#projects">Projects</a>
   <a class="l" href="#notes">Notes</a>
   <a class="l" href="#poem">Poem</a>
   <button id="theme" aria-label="Toggle dark mode">◐</button>
@@ -153,11 +154,36 @@ footer{border-top:1px solid var(--rule);padding:26px 0 50px;color:var(--muted);f
 <section id="publications">
   <h2>Publications and manuscripts</h2>
   <ul class="pubs">
-    <li><span class="yr">2026</span><b>R. J. Mahat</b>, A. Venkatraman, S. R. Kalidindi. Bayesian calibration of Voce hardening parameters from the small punch test. <i>In preparation.</i></li>
-    <li><span class="yr">2026</span>S. Mahmoud, <b>R. J. Mahat</b>, et al., S. R. Kalidindi. Bayesian identification of elastic-plastic properties from high-throughput small punch tests and DIC measurements. <i>Under review.</i></li>
+    <li><span class="yr">in prep.</span><b>R. J. Mahat</b>, et al., R. Arróyave, I. Karaman, S. R. Kalidindi. Rapid evaluation of elastic–plastic constitutive laws for HTMDEC high-entropy alloys using small punch tests. <i>In preparation.</i></li>
+    <li><span class="yr">in prep.</span><b>R. J. Mahat</b>, A. Venkatraman, S. R. Kalidindi. Bayesian calibration of Voce hardening parameters from the small punch test: identifiability and structured cross-test discrepancy. <i>In preparation.</i></li>
+    <li><span class="yr">review</span>S. Mahmoud, <b>R. J. Mahat</b>, et al., S. R. Kalidindi. Bayesian identification of elastic-plastic properties from high-throughput small punch tests and DIC measurements. <i>Under review.</i></li>
+    <li><span class="yr">ms.</span>S. Mahmoud, A. Venkatraman, <b>R. J. Mahat</b>, et al., S. R. Kalidindi. Amortized posteriors for estimation of material constitutive parameters from multimodal measurements on small punch tests. <i>Manuscript.</i></li>
     <li><span class="yr">2026</span>N. Flores, et al. (incl. <b>R. Mahat</b>, S. R. Kalidindi, R. Arróyave). Data-driven insights into composition–property relationships in FCC high entropy alloys. <i>Scripta Materialia</i> 274, 117136. <a href="https://doi.org/10.1016/j.scriptamat.2025.117136">doi</a></li>
     <li><span class="yr">2024</span>M. Mulukutla, A. N. Person, S. Voigt, et al. Illustrating an effective workflow for accelerated materials discovery. <i>Integrating Materials and Manufacturing Innovation</i> 13, 453–473. <a href="https://doi.org/10.1007/s40192-024-00357-3">doi</a></li>
   </ul>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="item"><div class="when">Georgia Tech</div><div>
+    <h3>HTMDEC high-entropy alloys: high-throughput small punch testing and constitutive calibration</h3>
+    <ul>
+      <li>Bayesian framework (simulation surrogate + model-discrepancy correction) inferring Voce elastic–plastic parameters from small punch tests of HTMDEC/BIRDSHOT FCC HEAs (Al–V–Cr–Mn–Fe–Co–Ni–Cu), benchmarked against tensile tests.</li>
+      <li>Ongoing: kinematic-hardening study of HEAs in the small punch test.</li>
+      <li>SPT, tensile, EBSD and composition data across eight vacuum-arc-melted HEA batches; simulation–experiment mismatch linked to grain size. Related: <a href="https://doi.org/10.1016/j.scriptamat.2025.117136">Scripta Materialia 2026</a>.</li>
+    </ul></div></div>
+  <div class="item"><div class="when">Georgia Tech</div><div>
+    <h3>Hamiltonian and Riemannian-manifold MCMC from scratch</h3>
+    <ul><li>Leapfrog HMC with a convergence study on ODE-defined posteriors; Riemannian-manifold MCMC benchmarked against HMC on strongly correlated posteriors; normalizing flows compared with MCMC on quality and cost.</li></ul></div></div>
+  <div class="item"><div class="when">Georgia Tech</div><div>
+    <h3>Latent-space modeling of high-dimensional mechanical test responses</h3>
+    <ul><li>PCA, graph-Laplacian and diffusion-map embeddings of load–displacement and DIC data; response-dependent corrections in latent space (basis of the 28% → 13% discrepancy result).</li></ul></div></div>
+  <div class="item"><div class="when">Georgia Tech</div><div>
+    <h3>Sensitivity and identifiability analysis of nonlinear simulation models</h3>
+    <ul><li>Jacobian-based and variance-based sensitivities and likelihood-informed subspaces to rank parameters, detect compensating directions and guide experiment and surrogate design.</li></ul></div></div>
+  <div class="item"><div class="when">IISc, 2019–2020</div><div>
+    <h3>Data-driven extraction of uniaxial creep properties from indentation using neural networks</h3>
+    <ul><li>Neural-network inverse models mapping instrumented-indentation response to creep parameters.</li></ul></div></div>
 </section>
 
 <section id="notes">
