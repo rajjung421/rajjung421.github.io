@@ -173,6 +173,10 @@ footer{border-top:1px solid var(--rule);padding:26px 0 50px;color:var(--muted);f
       <li>SPT, tensile, EBSD and composition data across eight vacuum-arc-melted HEA batches; simulation–experiment mismatch linked to grain size. Related: <a href="https://doi.org/10.1016/j.scriptamat.2025.117136">Scripta Materialia 2026</a>.</li>
     </ul></div></div>
   <div class="item"><div class="when">Georgia Tech</div><div>
+    <h3>Differentiable plasticity FEM in JAX</h3>
+    <ul><li>Fully differentiable axisymmetric punch-test FEM with J<sub>2</sub> plasticity (Voce + Armstrong–Frederick hardening): implicit return map and Newton via implicit differentiation, exact consistent tangent by autodiff, penalty contact, load stepping.</li>
+      <li>Exact parameter sensitivities by forward mode, adjoint and a hand-derived direct recursion (agree to 10<sup>−13</sup>); Fisher-information comparison of what tension and punch tests identify. <a href="https://rajjung421.github.io/differentiable-plasticity-jax/">Notes and flowcharts</a>.</li></ul></div></div>
+  <div class="item"><div class="when">Georgia Tech</div><div>
     <h3>Hamiltonian and Riemannian-manifold MCMC from scratch</h3>
     <ul><li>Leapfrog HMC with a convergence study on ODE-defined posteriors; Riemannian-manifold MCMC benchmarked against HMC on strongly correlated posteriors; normalizing flows compared with MCMC on quality and cost.</li></ul></div></div>
   <div class="item"><div class="when">Georgia Tech</div><div>
@@ -189,6 +193,14 @@ footer{border-top:1px solid var(--rule);padding:26px 0 50px;color:var(--muted);f
 <section id="notes">
   <h2>Learning notes</h2>
   <div class="card">
+    <h3>Differentiable plasticity FEM in JAX</h3>
+    <p>A small, fully differentiable punch-test model with J<sub>2</sub> plasticity (Voce + Armstrong–Frederick hardening),
+    with detailed flowcharts of how information about the hardening law travels to the measured load: return map,
+    consistent tangent, contact, history, and exact sensitivities (forward mode, adjoint and a hand-written recursion).</p>
+    <div class="links">
+      <a class="btn" href="https://rajjung421.github.io/differentiable-plasticity-jax/">Read the notes</a>    </div>
+  </div>
+  <div class="card" style="margin-top:14px">
     <h3>When is a Gaussian prior “the same kind of thing”?</h3>
     <p>Computational notes on the Feldman–Hájek theorem, equivalent versus singular Gaussian measures, and what they mean
     for building priors for groundwater heads: which features (wells, leakage, a conductivity lens) can be added as a
