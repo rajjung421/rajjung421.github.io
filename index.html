@@ -176,7 +176,7 @@ footer{border-top:1px solid var(--rule);padding:26px 0 50px;color:var(--muted);f
     </ul></div></div>
   <div class="item"><div class="when">Georgia Tech</div><div>
     <h3>Differentiable plasticity FEM in JAX</h3>
-    <ul><li>Fully differentiable axisymmetric punch-test FEM with J<sub>2</sub> plasticity (Voce + Armstrong–Frederick hardening): implicit return map and Newton via implicit differentiation, exact consistent tangent by autodiff, penalty contact, load stepping.</li>
+    <ul><li>Fully differentiable axisymmetric punch-test FEM in JAX: finite-strain J<sub>2</sub> plasticity with F-bar elements, Voce isotropic and multi-backstress Chaboche kinematic hardening, penalty contact with punch and dies, implicit return map and Newton via implicit differentiation. Matches Abaqus/Standard within about 1&nbsp;% in force and element by element in backstress, including cyclic unloading.</li>
       <li>Exact parameter sensitivities by forward mode, adjoint and a hand-derived direct recursion (agree to 10<sup>−13</sup>); Fisher-information comparison of what tension and punch tests identify. <a href="https://rajjung421.github.io/differentiable-plasticity-jax/">Notes and flowcharts</a>.</li></ul></div></div>
   <div class="item"><div class="when">Georgia Tech</div><div>
     <h3>Hamiltonian and Riemannian-manifold MCMC from scratch</h3>
@@ -197,9 +197,10 @@ footer{border-top:1px solid var(--rule);padding:26px 0 50px;color:var(--muted);f
   <p class="sub">Self-contained write-ups I keep public: each has a readable web page and a GitHub repository with the LaTeX source and figures.</p>
   <div class="card">
     <h3>Differentiable plasticity FEM in JAX</h3>
-    <p>A small, fully differentiable punch-test model with J<sub>2</sub> plasticity (Voce + Armstrong–Frederick hardening),
-    with detailed flowcharts of how information about the hardening law travels to the measured load: return map,
-    consistent tangent, contact, history, and exact sensitivities (forward mode, adjoint and a hand-written recursion).</p>
+    <p>A fully differentiable small punch test in JAX, with isotropic (Voce) and kinematic (Chaboche) hardening, checked
+    against Abaqus. Animations of the punch and of the yield surface, flowcharts of how information about the hardening law
+    travels to the measured load (return map, consistent tangent, contact, history), and exact sensitivities by forward
+    mode, adjoint and a hand-written recursion.</p>
     <div class="links">
       <a class="btn" href="https://rajjung421.github.io/differentiable-plasticity-jax/">Read the notes</a>
       <a class="btn" href="https://github.com/rajjung421/differentiable-plasticity-jax"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.4-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.4 1.1 3 .9.1-.7.4-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.8 1a9.6 9.6 0 0 1 5 0c1.9-1.3 2.8-1 2.8-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/></svg>GitHub repo</a>
